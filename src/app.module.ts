@@ -11,6 +11,10 @@ import { join } from 'path';
       rootPath: join(__dirname, '..', 'swagger-static'),
       serveRoot: process.env.NODE_ENV === 'development' ? '/' : '/swagger',
     }),
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'static'),
+      serveRoot: '/',
+    }),
   ],
   controllers: [AppController],
   providers: [ParserService],
